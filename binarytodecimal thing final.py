@@ -8,9 +8,12 @@ def binarytodecimal(binary):
             total += (2**expo)
     return total
 def decimaltobinary(decimal):
-    decimal = bin(decimal)
-    num = decimal
-    return num
+    decimal = int(decimal)
+    b = ""
+    while decimal > 0:
+        b = str(decimal%2) + b
+        decimal //= 2
+    return b 
 def hexadecimaltodecimal():
     hexadecimal = input("enter a value (example: 2cf) ")
     decimal = int(hexadecimal, 16)
